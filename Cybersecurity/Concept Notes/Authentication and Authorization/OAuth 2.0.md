@@ -157,6 +157,8 @@ OAuth 2.0 provides a flexible foundation but does not define:
 4. **Complex Revocation**: Ensuring proper token revocation and session management, especially in scenarios involving multiple devices.
 5. **Evolving Standards**: Keeping up with best practices and updates (e.g., PKCE, JWT).
 
+### **[[OAuth 2.0 Threats]]**
+
 ### **In Summary
 
 OAuth 2.0 provides a secure and scalable mechanism for authorization, enabling applications to access resources on behalf of users without sharing credentials. For example, it powers integrations like linking a fitness app with a health tracking service. While flexible, its correct implementation is critical to avoid security pitfalls.
