@@ -111,6 +111,6 @@ We observe that tyler has elevated privileges. we can thus run `sudo bash` to ga
 
 - Project manager Silverpeas username : scr1ptkiddy
 - tim user SSH password : `cm0nt!md0ntf0rg3tth!spa$$w0rdagainlol`
-- User Flag ( /home/tim/user.txt ) : THM{c4ca4238a0b923820dcc509a6f75849b}
+- User Flag ( /home/tim/user.txt ) : **THM{c4ca4238a0b923820dcc509a6f75849b}**
 - tyler user SSH password : `_Zd_zx7N823/`
-- Root Flag ( /root/root.txt ) : THM{098f6bcd4621d373cade4e832627b4f6}
+- Root Flag ( /root/root.txt ) : **THM{098f6bcd4621d373cade4e832627b4f6}**

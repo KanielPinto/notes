@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4deaf2c86bb89cd9",
+        "id": "1746ef22e411ece9",
         "type": "tabs",
         "children": [
           {
-            "id": "34353b75d4ba7b60",
+            "id": "a39b1a1df7d24e84",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -152,7 +152,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,14 +167,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6fdb2e02a841fd9b",
+  "active": "a39b1a1df7d24e84",
   "lastOpenFiles": [
+    "Cybersecurity/HTB/HTB.md",
+    "Cybersecurity/TryHackMe/Silver Platter.md",
+    "New Text Document.txt",
     "README.md",
     "Cybersecurity/VAPT/VAPT.md",
     "Cybersecurity/VAPT/VAPT Fundamentals.md",
     "Cybersecurity/VAPT",
     "Cybersecurity/TryHackMe/TryHackMe.md",
-    "Cybersecurity/TryHackMe/Silver Platter.md",
     "Cybersecurity/TryHackMe",
     "Cybersecurity/HTB/Machines/Underpass.md",
     "Cybersecurity/HTB/Machines/Machines.md",
@@ -182,7 +185,6 @@
     "Cybersecurity/HTB/Machines/Cicada.md",
     "Cybersecurity/HTB/Machines/Alert.md",
     "Cybersecurity/HTB/Machines",
-    "Cybersecurity/HTB/HTB.md",
     "Cybersecurity/HTB",
     "Cybersecurity/Concept Notes/Networking Concepts.md",
     "Cybersecurity/Concept Notes/Governance and Regulation.md",
@@ -199,7 +201,6 @@
     "LinkVortex.md",
     "Cicada.md",
     "Chemistry.md",
-    "Machines.md",
     "Pasted image 20250109121451.png",
     "Untitled.canvas"
   ]
