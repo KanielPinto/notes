@@ -1,0 +1,5 @@
+# notes
+
+---
+
+Obsidian notes.
