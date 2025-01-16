@@ -45,3 +45,5 @@ The top security risks to APIs are cataloged within the **[OWASP API Security To
 - Message Validation
 - Encryption and Signing
 - Proper Access Control
+
+Authentication and Authorization for APIs are mainly implemented utilizing the **[[OAuth 2.0]]** and **[[OpenID Connect]]** standards.

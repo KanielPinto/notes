@@ -3,7 +3,6 @@ notes detailing hopefully almost everything i learn over my journey to become go
 ### Hack The Box [[HTB]]
 ### [[TryHackMe]]
 ### [[Concept Notes]] 
-### [[List Of Topics To Look Into]]
 
 ### [[VAPT]]
 
