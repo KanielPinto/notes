@@ -1,5 +1,3 @@
 # notes
 
----
-
 Obsidian notes.
