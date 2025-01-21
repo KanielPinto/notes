@@ -35,7 +35,7 @@
 
 - **Identity Provider (IdP)**: The entity that authenticates the user and issues tokens.
 - **Relying Party (RP)**: The application or service relying on the IdP for identity verification.
-- **ID Token**: A JSON Web Token (JWT) containing user identity claims, signed by the IdP.
+- **ID Token**: A JSON Web Token ([[JWT]]) containing user identity claims, signed by the IdP.
 
 ---
 
@@ -160,7 +160,7 @@ grant_type=authorization_code
 ### Token Response
 
 The Authorization Server responds with:
-- **ID Token**: A JSON Web Token (JWT) containing user identity claims (e.g., `sub`, `email`, `name`).
+- **ID Token**: A JSON Web Token ([[JWT]]) containing user identity claims (e.g., `sub`, `email`, `name`).
 - **Access Token**: Used to access protected resources (e.g., `userinfo` endpoint).
 - **Refresh Token**: Optionally issued to obtain new tokens without user interaction.
 
@@ -232,12 +232,12 @@ Authorization: Bearer SlAV32hkKG...
 
 ### **ID Token vs Access Token in OpenID Connect
 
-| Feature         | ID Token                          | Access Token                     |
-|-----------------|-----------------------------------|-----------------------------------|
-| Purpose         | Identity information             | Resource access authorization    |
-| Format          | JWT                              | Can be opaque or JWT             |
-| Audience        | Relying Party (RP)               | Resource Server                  |
-| Lifetime        | Typically short-lived            | Configurable                     |
+| Feature  | ID Token              | Access Token                  |
+| -------- | --------------------- | ----------------------------- |
+| Purpose  | Identity information  | Resource access authorization |
+| Format   | [[JWT]]               | Can be opaque or JWT          |
+| Audience | Relying Party (RP)    | Resource Server               |
+| Lifetime | Typically short-lived | Configurable                  |
 
 ---
 

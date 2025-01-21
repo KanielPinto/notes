@@ -1,5 +1,5 @@
 
-HTB : [[Machines]]
+[[HTB]] : [[Machines]]
 
 **Date:** 08/01/25  
 **Target IP:** 10.10.11.38
@@ -35,7 +35,7 @@ HTB : [[Machines]]
 
 1. **Brute Forcing Login:**
     
-    - Attempted brute forcing with `hydra`:
+    - Attempted brute forcing with [[hydra]] :
         
         ```
         hydra -l admin -P /usr/share/wordlists/seclists/Passwords/500-worst-passwords.txt 10.10.11.38 -s 5000 http-post-form "/login:username=^USER^&password=^PASS^:Invalid credentials" -I -vV

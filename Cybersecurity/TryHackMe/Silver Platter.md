@@ -13,8 +13,6 @@
 - 80/tcp   open  http       nginx 1.18.0 (Ubuntu)
 - 8080/tcp open  http-proxy
 
-**Nikto Scan:**
-
 ---
 ### **Exploration and Enumeration**
 

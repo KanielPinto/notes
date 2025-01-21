@@ -1,5 +1,5 @@
 
-HTB : [[Machines]]
+[[HTB]] : [[Machines]]
 
 **IP:** 10.10.11.48  
 **Date:** 08/01/2025  
@@ -19,7 +19,7 @@ HTB : [[Machines]]
 
 ---
 
-### **SNMP Enumeration**
+### **[[SNMP]] Enumeration**
 
 Using the default SNMP community string `public`:
 ```bash

