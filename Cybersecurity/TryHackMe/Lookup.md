@@ -8,7 +8,8 @@
 
 ## **Initial Scanning**
 
-**Nmap Results:**
+**[[Nmap]] Results:**
+
 - 22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.9 (Ubuntu Linux; protocol 2.0)
 - 80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
 

@@ -8,7 +8,7 @@
 
 ### **Enumeration**
 
-#### **Nmap Scan Results**
+#### **[[Nmap]] Scan Results**
 - **Open Ports:**  
   - TCP 22: OpenSSH 8.9p1 (Ubuntu 3ubuntu0.10)  
   - TCP 80: Apache/2.4.52 (Outdated Version)  

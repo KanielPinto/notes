@@ -7,7 +7,7 @@
 ---
 ### **Initial Scanning**
 
-**Nmap Results:**
+**[[Nmap]] Results:**
 
 - 22/tcp   open  ssh        OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
 - 80/tcp   open  http       nginx 1.18.0 (Ubuntu)

@@ -8,7 +8,7 @@
 
 ### **Initial Scanning**
 
-**Nmap Results:**
+**[[Nmap]] Results:**
 
 - **22/tcp**: OpenSSH 8.2p1 Ubuntu 4ubuntu0.11 (Ubuntu Linux; protocol 2.0)
 - **5000/tcp**: Werkzeug httpd 3.0.3 (Python 3.9.5)

@@ -8,7 +8,7 @@
 
 ### **Enumeration**
 
-#### **Nmap Scan Results**
+#### **[[Nmap]] Scan Results**
 
 - **OS:** Windows Server 2022
 - **Open Ports:**
