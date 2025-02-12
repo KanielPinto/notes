@@ -1,5 +1,5 @@
 
-### **Rules Of Engagement ( ROE )** #rules-of-engagement
+## **Rules Of Engagement ( ROE )** #rules-of-engagement
 
 The ROE is a document that is created at the initial stages of a penetration testing engagement. The SANS institute has a great example of this document which you can view online [here](https://sansorg.egnyte.com/dl/bF4I3yCcnt/?).
 
@@ -12,7 +12,7 @@ A standard ROE document possesses the following 3 sections :
 |    Rules    | The rules section will define exactly the techniques that are permitted during the engagement. For example, the rules may specifically state that techniques such as phishing attacks are prohibited, but MITM (Man-in-the-Middle) attacks are okay. |
 
 
-### **Penetration Test Stages** #pentest-stages
+## **Penetration Test Stages** #pentest-stages
 
 | **Stage**             | **Description**                                                                                                                                                                                                                                                                                                                                                                  |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,11 +22,11 @@ A standard ROE document possesses the following 3 sections :
 | Privilege Escalation  | Once you have successfully exploited a system or application (known as a foothold), this stage is the attempt to expand your access to a system. You can escalate horizontally and vertically, where horizontally is accessing another account of the same permission group (i.e. another user), whereas vertically is that of another permission group (i.e. an administrator). |
 | Post-exploitation     | This stage involves a few sub-stages:  <br><br>**1.** What other hosts can be targeted (pivoting)<br><br>**2.** What additional information can we gather from the host now that we are a privileged user<br><br>**3.**  Covering your tracks<br><br>**4.** Reporting                                                                                                            |
 
-### **Penetration Testing Methodologies** #pentest-methodology
+## **Penetration Testing Methodologies** #pentest-methodology
 
 Common popular PT methodologies include:
 
-#### [The Open Source Security Testing Methodology Manual](https://github.com/mtesauro/owasp-wte/blob/master/temp-projects/wte-docs/contents/usr/share/doc/WTE-Documentation/OSSTMM/OSSTMM.3.pdf) : 
+### [The Open Source Security Testing Methodology Manual](https://github.com/mtesauro/owasp-wte/blob/master/temp-projects/wte-docs/contents/usr/share/doc/WTE-Documentation/OSSTMM/OSSTMM.3.pdf) : 
 
 The OSSTMM provides a detailed framework of testing strategies for systems, software, applications, communications and the human aspect of cybersecurity.
 
@@ -37,7 +37,7 @@ The OSSTMM provides a detailed framework of testing strategies for systems, soft
 | The framework is flexible depending upon the organisation's needs.                                                                                         | _Intentionally left blank._                                                                   |
 | The framework is meant to set a standard for systems and applications, meaning that a universal methodology can be used in a penetration testing scenario. | _Intentionally left blank._                                                                   |
 
-#### [Open Web Application Security Project](https://owasp.org/) : 
+### [Open Web Application Security Project](https://owasp.org/) : 
 
 The #OWASP framework is a community-driven and frequently updated framework used solely to test the security of web applications and services.
 
@@ -48,7 +48,7 @@ The #OWASP framework is a community-driven and frequently updated framework used
 | It covers all stages of an engagement: from testing to reporting and remediation. | The framework doesn't hold any accreditation such as CHECK.                                    |
 | Specialises in web applications and services.                                     | _Intentionally left blank._                                                                    |
 
-#### [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) :
+### [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) :
 
 The #NIST Cybersecurity Framework is a popular framework used to improve an organization's cybersecurity standards and manage the risk of cyber threats. 
 
@@ -60,7 +60,7 @@ The #NIST Cybersecurity Framework is a popular framework used to improve an orga
 | NIST provides accreditation for organisations that use this framework.                                                     | _Intentionally left blank.  <br>_                                                                                  |
 | The NIST framework is designed to be implemented alongside other frameworks.                                               | _Intentionally left blank._                                                                                        |
 
-### **Testing Scopes** #pentest-scopes
+## **Testing Scopes** #pentest-scopes
 
 #### Black-Box Testing
 
@@ -74,3 +74,14 @@ This testing process is the most popular for things such as penetration testing.
 
 This testing process is a low-level process usually done by a software developer who knows programming and application logic. The tester will be testing the internal components of the application or piece of software and, for example, ensuring that specific functions work correctly and within a reasonable amount of time.
 
+
+## **Vulnerability, Exploit and Payload**
+
+**Exploit:** 
+A piece of code that uses a vulnerability present on the target system.
+
+**Vulnerability:** 
+A design, coding, or logic flaw affecting the target system. The exploitation of a vulnerability can result in disclosing confidential information or allowing the attacker to execute code on the target system.
+
+**Payload:** 
+An exploit will take advantage of a vulnerability. However, if we want the exploit to have the result we want (gaining access to the target system, read confidential information, etc.), we need to use a payload. Payloads are the code that will run on the target system.
