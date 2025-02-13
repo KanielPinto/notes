@@ -7,5 +7,6 @@
     "downscalePercent": 100
   },
   "alwaysUpdateLinks": true,
-  "showLineNumber": false
+  "showLineNumber": false,
+  "defaultViewMode": "preview"
 }
