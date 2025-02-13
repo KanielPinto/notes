@@ -5,7 +5,6 @@
 **Target IP**: 10.10.88.15
 
 ---
-
 ## **Initial Scanning**
 
 **[[Nmap]] Results:**

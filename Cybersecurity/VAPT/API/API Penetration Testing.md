@@ -31,7 +31,6 @@ Vulnerabilities can arise at all the points of interaction between the uses and 
 
 The top security risks to APIs are cataloged within the **[OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)**.
 
-
 **As a whole the most standard measures for ensuring the security of APIs include : **
 - Securing documentation if you don't intend your API to be publicly accessible.
 - Ensuring  documentation is kept up to date so that legitimate testers have full visibility of the API's attack surface.

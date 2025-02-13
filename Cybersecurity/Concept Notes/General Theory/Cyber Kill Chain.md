@@ -93,3 +93,17 @@ With hands-on keyboard access, the attacker can achieve the following: 
 - Overwrite or corrupt data.
 
 The traditional Cyber Kill Chain or Lockheed Martin Cyber Kill Chain was last modified in 2011, which is the date of its establishment. The absence of updates and modifications creates security gaps. Since the main focus of the framework is on malware delivery and network security, the traditional Cyber Kill Chain will not be able to identify **Insider Threats**.
+
+
+Components of the kill chain are broken down in the table below.
+
+| Technique             | Purpose                                                                           | Examples                                         |
+| --------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Reconnaissance        | Obtain information on the target                                                  | Harvesting emails, OSINT                         |
+| Weaponization         | Combine the objective with an exploit. Commonly results in a deliverable payload. | Exploit with backdoor, malicious office document |
+| Delivery              | How will the weaponized function be delivered to the target                       | Email, web, USB                                  |
+| Exploitation          | Exploit the target's system to execute code                                       | MS17-010, Zero-Logon, etc.                       |
+| Installation          | Install malware or other tooling                                                  | Mimikatz, Rubeus, etc.                           |
+| Command & Control     | Control the compromised asset from a remote central controller                    | Empire, Cobalt Strike, etc.                      |
+| Actions on Objectives | Any end objectives: ransomware, data exfiltration, etc.                           | Conti, LockBit2.0, etc.                          |
+
