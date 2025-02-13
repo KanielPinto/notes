@@ -151,4 +151,13 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
+``` ln=false
+❯ ssh -i /home/kali/.ssh/id_rsa comte@10.10.13.47
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-174-generic x86_64)....
+
+comte@cheesectf:~$ 
+```
+
+---
+## **Escalation**
 
