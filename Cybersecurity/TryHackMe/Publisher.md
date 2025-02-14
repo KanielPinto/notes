@@ -12,6 +12,7 @@
 ## **Initial Scanning**
 
 ### **[[nmap]]** :
+
 - 22/tcp open  ssh     syn-ack ttl 61 OpenSSH 8.2p1 Ubuntu 4ubuntu0.10 (Ubuntu Linux; protocol 2.0)
 - 80/tcp open  http    syn-ack ttl 60 Apache httpd 2.4.41 ((Ubuntu))
 
