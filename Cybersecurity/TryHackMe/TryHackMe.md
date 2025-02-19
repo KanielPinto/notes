@@ -1,5 +1,3 @@
-
-
 ## Practice Rooms
 
 ### [[Silver Platter]]
