@@ -128,15 +128,17 @@ https://owasp.org/www-project-top-ten/
 1. [TryHackMe](https://tryhackme.com/)
 2. [PortSwigger Web Security Academy](https://portswigger.net/web-security)
 3. [The OWASP Top 10 (Web)](https://owasp.org/www-project-top-ten/)
+4. [Exploit DB](https://www.exploit-db.com/)
+5. [Kali Linux Download](https://www.kali.org/get-kali/#kali-virtual-machines)
 
 ---
 ## **Certifications**
 
-4. CEH
-5. CPTS
-6. OSCP
-7. Cert-In
-8. 
+6. CEH
+7. CPTS
+8. OSCP
+9. Cert-In
+10. 
 
 ---
 
