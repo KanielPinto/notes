@@ -3,8 +3,8 @@
 ## **whoami**
 
 #### **Kaniel Pinto**
-B.Sc.(IT) - Batch of 2024
-Part of the VAPT Team at 63SATS
+B.Sc.(IT) - Batch of 2024.
+Part of the VAPT Team at 63SATS.
 
 ---
 ## **Main Areas / Job Profiles**
