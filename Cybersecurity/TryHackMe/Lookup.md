@@ -15,7 +15,7 @@
 ---
 ## **Exploration and Enumeration**
 
-Login Page discovered at **Port 80**. Wrong password alert allows user enumeration leading to discovery that ==`admin`== user exists.
+Login Page discovered at **Port 80**. Wrong password alert allows user enumeration leading to discovery that ==admin== user exists.
 
 **DirSearch Results**:
 

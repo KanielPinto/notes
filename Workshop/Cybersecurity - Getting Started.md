@@ -3,7 +3,7 @@
 
 > [!NOTE] $ whoami
 > **Kaniel Pinto**
-> B.Sc.(IT), Batch of 2024
+> B.Sc.(IT) - Batch of 2024
 > Part of the VAPT Team at 63SATS
 
 ---
@@ -14,7 +14,7 @@ minLevel: 0 # Include headings from the specified level
 maxLevel: 3 # Include headings up to the specified level
 includeLinks: true # Make headings clickable
 hideWhenEmpty: false # Hide TOC if no headings are found
-debugInConsole: false # Print debug info in Obsidian console
+debugInConsole: false # Print debug info in Obsidian consol
 ```
 ---
 ## **Main Areas / Job Profiles**
