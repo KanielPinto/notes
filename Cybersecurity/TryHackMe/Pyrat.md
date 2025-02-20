@@ -24,7 +24,7 @@ Navigating to Port 8000 displays "Try a more basic connection". This apparently 
 
 This gives me a shell as www-data.
 
-Running linpeas.sh shows 2 users root and think. Found a path to mail as /var/mail/think.
+Running linpeas.sh shows 2 users - root and think. Found a path to mail as /var/mail/think.
 
 ```
 $ cat /var/mail/think
