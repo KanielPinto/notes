@@ -86,3 +86,82 @@ Domain Controllers are the third most common device within an Active Directory d
 ## **Group Policies**
 
 Windows manages such policies through **Group Policy Objects (GPO)**. GPOs are simply a collection of settings that can be applied to OUs. GPOs can contain policies aimed at either users or computers, allowing you to set a baseline on specific machines and identities. Something important to have in mind is that any GPO will apply to the linked OU and any sub-OUs under it.
+
+### GPO distribution
+
+GPOs are distributed to the network via a network share called `SYSVOL`, which is stored in the DC. All users in a domain should typically have access to this share over the network to sync their GPOs periodically. The SYSVOL share points by default to the `C:\Windows\SYSVOL\sysvol\` directory on each of the DCs in our network.
+
+Once a change has been made to any GPOs, it might take up to 2 hours for computers to catch up. If you want to force any particular computer to sync its GPOs immediately, you can always run the following command on the desired computer:
+
+```shell
+PS C:\> gpupdate /force
+```
+
+## **Authentication**
+
+When using Windows domains, all credentials are stored in the Domain Controllers. Whenever a user tries to authenticate to a service using domain credentials, the service will need to ask the Domain Controller to verify if they are correct. Two protocols can be used for network authentication in windows domains:
+
+- **Kerberos:** Used by any recent version of Windows. This is the default protocol in any recent domain.
+- **NetNTLM:** Legacy authentication protocol kept for compatibility purposes.
+
+While NetNTLM should be considered obsolete, most networks will have both protocols enabled.
+
+### Kerberos Authentication
+
+Kerberos authentication is the default authentication protocol for any recent version of Windows. Users who log into a service using Kerberos will be assigned tickets. Think of tickets as proof of a previous authentication. Users with tickets can present them to a service to demonstrate they have already authenticated into the network before and are therefore enabled to use it.
+
+Kerberos authentication follows these steps:
+
+1. **User Login:** The client sends an encrypted authentication request to the Key Distribution Center (KDC).
+2. **TGT Issuance:** The KDC verifies credentials and issues a **Ticket Granting Ticket (TGT)**.
+3. **Service Request:** The client presents the TGT to the KDC’s Ticket Granting Server (TGS) to request access to a service.
+4. **Service Ticket Issuance:** The TGS verifies the TGT and provides a **Service Ticket**.
+5. **Access Request:** The client presents the Service Ticket to the target server.
+6. **Access Granted:** The server verifies the ticket and allows secure access.
+
+### NetNTLM Authentication
+
+NetNTLM works using a challenge-response mechanism.
+
+1. The client sends an authentication request to the server they want to access.
+2. The server generates a random number and sends it as a challenge to the client.
+3. The client combines their NTLM password hash with the challenge (and other known data) to generate a response to the challenge and sends it back to the server for verification.
+4. The server forwards the challenge and the response to the Domain Controller for verification.
+5. The domain controller uses the challenge to recalculate the response and compares it to the original response sent by the client. If they both match, the client is authenticated; otherwise, access is denied. The authentication result is sent back to the server.
+6. The server forwards the authentication result to the client.
+
+Note that the user's password (or hash) is never transmitted through the network for security.
+
+**Note:** The described process applies when using a domain account. If a local account is used, the server can verify the response to the challenge itself without requiring interaction with the domain controller since it has the password hash stored locally on its SAM.
+
+
+## **Trees, Forests, Trusts**
+
+### Tree
+A **tree** is a hierarchical structure of one or more **domains** that share a **common namespace** and a **contiguous DNS name**.
+
+Example: A company might have a main domain `company.com` and subdomains like `sales.company.com` and `hr.company.com`.
+
+All domains in a tree automatically trust each other through **transitive trust** relationships, allowing seamless authentication and resource sharing.
+
+### Forest
+A **forest** is a collection of one or more **trees** that share:
+- A **common schema** (defines object classes and attributes across AD).
+- A **global catalog** (stores information about all objects for quick searches).
+- A **trust relationship** between trees.
+
+Unlike a tree, a **forest allows multiple domain trees with different namespaces**.
+
+Example: A company with multiple subsidiaries might have `company.com` in one tree and `subsidiary.net` in another, both under the same forest.
+
+**Forests serve as security boundaries**, meaning policies, users, and resources are typically isolated from other forests unless trust relationships are established.
+
+A new security group needs to be introduced when talking about trees and forests. The **Enterprise Admins** group will grant a user administrative privileges over all of an enterprise's domains. Each domain would still have its Domain Admins with administrator privileges over their single domains and the Enterprise Admins who can control everything in the enterprise.
+### Trust
+**Trusts** define how authentication and resource access work between domains and forests. They can be:
+- **Transitive:** Automatically extend trust within a forest (e.g., `A → B`, `B → C` means `A → C` is also trusted).
+- **Non-Transitive:** Limited to only the specified domains (e.g., `A ↔ B`, but `A` does not trust `C`).
+- **One-Way:** Only one domain trusts the other (e.g., `Domain A` trusts `Domain B`, but `B` does not trust `A`).
+- **Two-Way:** Both domains trust each other equally.
+
+Trusts allow users from one domain or forest to access resources in another while maintaining security and control.
