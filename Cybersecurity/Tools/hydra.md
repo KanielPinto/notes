@@ -3,7 +3,7 @@ hydra is a popular brute-force tool used to test login credentials on various ne
 
 ---
 
-### 1. **[[FTP (21)]] Brute Force**
+### 1. **[[FTP]] Brute Force**
 
 ```bash
 hydra -l username -P /path/to/passwords.txt ftp://target_ip

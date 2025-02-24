@@ -3,7 +3,7 @@
 
 OAuth 2.0 is an open standard framework designed to enable secure delegated access. It allows applications to access resources on behalf of a user without sharing their credentials. For example, a user can allow a third-party app to post to their social media account without sharing their password.
 
-### **OAuth 2.0 Authorization Flow and Roles
+### **OAuth 2.0 Authorization Flow and Roles**
 
 #### Roles:
 
@@ -12,7 +12,7 @@ OAuth 2.0 is an open standard framework designed to enable secure delegated acce
 3. **Authorization Server**: Issues access tokens after authenticating the resource owner and obtaining authorization (e.g., Google's OAuth server).
 4. **Resource Server**: Hosts the protected resources and verifies access tokens to fulfill requests (e.g., the Google Drive API).
 
-#### **Authorization Flow:
+#### **Authorization Flow:**
 
 1. The client (e.g., a calendar app) requests authorization from the resource owner.
 2. The resource owner grants or denies the request (e.g., the user approves access through a Google login page).
@@ -20,16 +20,16 @@ OAuth 2.0 is an open standard framework designed to enable secure delegated acce
 4. The client exchanges the grant with the authorization server for an access token.
 5. The client uses the access token to access the protected resources on the resource server (e.g., retrieving calendar data from Google Calendar).
 
-### **Registration
+### **Registration**
 
 Before using OAuth 2.0, the client must register with the authorization server. During registration, the client receives credentials, such as a **client ID** and **client secret**, and specifies redirect URIs. For example, a developer building a weather app might register their app with Facebook to enable Facebook Login.
 
-### **Authorization Server and Resource Server
+### **Authorization Server and Resource Server**
 
 - **Authorization Server**: Handles user authentication and issues access tokens upon successful authorization (e.g., GitHub's authorization server).
 - **Resource Server**: Validates access tokens and serves protected resources to authorized clients (e.g., GitHub API providing repository data).
 
-### **Access Token
+### **Access Token**
 
 An access token is a credential issued to the client by the authorization server. It:
 
@@ -37,22 +37,22 @@ An access token is a credential issued to the client by the authorization server
 - Is sent in API requests to access protected resources.
 - Can have a limited lifespan and specific scopes. For instance, a token might allow access to read a user's emails but not to send new ones.
 
-### **Scope and Permitted Resource Calls
+### **Scope and Permitted Resource Calls**
 
 - **Scope**: Defines the permissions or access levels granted to the client. For example:
     - `read:user` (access to user profile data)
     - `write:email` (permission to send emails)
 - Clients must request scopes explicitly during authorization. For instance, an email app might request `read:email` and `send:email` scopes to perform its functions.
 
-### **OAuth is Not an Authentication Protocol
+### **OAuth is Not an Authentication Protocol**
 
 OAuth 2.0 is a framework for **authorization**, not **authentication**. For example, while OAuth can let a travel app access a user's calendar, it doesn’t verify the user's identity for login. To enable authentication, protocols like OpenID Connect build on OAuth 2.0.
 
-### **Social Login
+### **Social Login**
 
 A popular use case of OAuth 2.0 is enabling users to log in to an application using credentials from another platform (e.g., "Log in with Google"). This eliminates the need to create new accounts and passwords for every service and allows users to link multiple apps to a single account.
 
-### **4 Grant Types
+### **4 Grant Types**
 
 #### 1. Authorization Code Grant
 
@@ -125,7 +125,7 @@ A popular use case of OAuth 2.0 is enabling users to log in to an application us
 
 **Bottom Line**: Secure and suitable for backend services without user involvement.
 
-### **Complexity of OAuth 2.0
+### **Complexity of OAuth 2.0**
 
 OAuth 2.0 is a flexible framework, but its implementation can be complex due to:
 
@@ -134,7 +134,7 @@ OAuth 2.0 is a flexible framework, but its implementation can be complex due to:
 - Handling refresh tokens and token revocation.
 - Implementing proper scope restrictions.
 
-### **OAuth 2.0 Is a Framework
+### **OAuth 2.0 Is a Framework**
 
 OAuth 2.0 provides a flexible foundation but does not define:
 
@@ -143,13 +143,13 @@ OAuth 2.0 provides a flexible foundation but does not define:
 - Standardized error messages.
 - Methods for token revocation.
 
-### **Disadvantages
+### **Disadvantages**
 
 1. **Complexity**: Requires careful implementation to ensure security.
 2. **Security Risks**: Vulnerable to attacks like token interception and replay if improperly implemented.
 3. **No Authentication Guarantee**: Lacks built-in mechanisms for user authentication.
 
-### **Challenges of OAuth 2.0 Implementation
+### **Challenges of OAuth 2.0 Implementation**
 
 1. **Token Security**: Ensuring tokens are securely stored and transmitted (e.g., using secure storage mechanisms on mobile devices).
 2. **Implementation Variability**: Differences in server configurations can lead to inconsistent behaviors (e.g., varying interpretations of scope).
@@ -159,7 +159,7 @@ OAuth 2.0 provides a flexible foundation but does not define:
 
 ### **[[OAuth 2.0 Threats]]**
 
-### **In Summary
+### **In Summary**
 
 OAuth 2.0 provides a secure and scalable mechanism for authorization, enabling applications to access resources on behalf of users without sharing credentials. For example, it powers integrations like linking a fitness app with a health tracking service. While flexible, its correct implementation is critical to avoid security pitfalls.
 

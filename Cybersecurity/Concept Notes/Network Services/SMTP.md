@@ -7,6 +7,12 @@ The SMTP server performs three basic functions:
 -  It sends the outgoing mail
 -  If the outgoing mail can't be delivered it sends the message back to the sender.
 
+Some of the common command include:
+- `HELO` or `EHLO` initiates an SMTP session
+- `MAIL FROM` specifies the sender’s email address
+- `RCPT TO` specifies the recipient’s email address
+- `DATA` indicates that the client will begin sending the content of the email message
+- `.` is sent on a line by itself to indicate the end of the email message
 ## **POP and IMAP**
 
 POP, or "Post Office Protocol" and IMAP, "Internet Message Access Protocol" are both email protocols who are responsible for the transfer of email between a client and a mail server. The main differences is in POP's more simplistic approach of downloading the inbox from the mail server, to the client. Where IMAP will synchronize the current inbox, with new mail on the server, downloading anything new. This means that changes to the inbox made on one computer, over IMAP, will persist if you then synchronize the inbox from another computer. The POP/IMAP server is responsible for fulfilling this process.
